@@ -1,0 +1,88 @@
+/* Общие стили для всего сайта. Стили отдельных частей — внутри .vue файлов (<style scoped>). */
+
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --muted: #777;
+  --border: #ddd;
+  --accent: #1a73e8;
+  --red: #e53935;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 26px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+/* сетка карточек: сколько влезет колонок шириной от 240px */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* блок «ничего не найдено» / «избранное пусто» */
+.empty {
+  padding: 40px 16px;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.no-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  color: var(--muted);
+}
